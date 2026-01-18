@@ -1,0 +1,12 @@
+/* groovylint-disable-next-line CompileStatic */
+pipeline {
+    agent any
+    stages {
+        stage('Hello') {
+            steps {
+                sh 'echo Hello world'
+                echo "Build number is ${currentBuild.number}"
+            }
+        }
+    }
+}
